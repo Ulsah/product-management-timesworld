@@ -25,7 +25,7 @@ This is an implementation of the system in a very basic form. The first task was
 			Admin type: techtipsAdmin
 			Doctor type: techtipsDoctor
 			User type: techtipsUser
-		Use this to login as different users and use the app. P.S: Default passwords are only applied when admin creates a user. When using registering from register page your own password can be created.
+		Use this to login as different users and use the app. P.S: Default passwords are only applied when admin creates a user. When registering from register page your own password can be created.
 
 ## Approach
 
