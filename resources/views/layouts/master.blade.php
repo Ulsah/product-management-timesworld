@@ -82,33 +82,17 @@
 			<ul class="nav nav-treeview">
 				@can('isAdmin')
 					<li class="nav-item">
-						<router-link to="/admin/manage-users" class="nav-link">
+						<router-link to="/admin/view-country" class="nav-link">
 							<i class="far fa-circle nav-icon"></i>
-							<p>Manage Users</p>
+							<p>View Country</p>
 						</router-link>
 					</li>
 				@endcan
 				@can('isAdmin')
 					<li class="nav-item">
-						<router-link to="/admin/manage-appointments" class="nav-link">
+						<router-link to="/admin/add-country" class="nav-link">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Manage Appointments</p>
-						</a>
-					</li>
-				@endcan
-				@can('isDoctor')
-					<li class="nav-item">
-						<router-link to="/doctor/manage-appointments" class="nav-link">
-						<i class="far fa-circle nav-icon"></i>
-						<p>Manage Appointments</p>
-						</a>
-					</li>
-				@endcan
-				@can('isUser')
-					<li class="nav-item">
-						<router-link to="/user/manage-appointments" class="nav-link">
-						<i class="far fa-circle nav-icon"></i>
-						<p>Manage Appointments</p>
+						<p>Add Country</p>
 						</a>
 					</li>
 				@endcan

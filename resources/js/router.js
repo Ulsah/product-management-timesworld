@@ -5,15 +5,8 @@ Vue.use(VueRouter);
 window.Vue = require('vue').default;
 
 // Admin Routes
-import ManageUsers from './components/Admin/ManageUsers.vue';
-import ManageAdminAppointments from './components/Admin/ManageAdminAppointments.vue';
-
-// Doctor Routes
-import ManageDoctorAppointments from './components/Doctor/ManageDoctorAppointments.vue';
-import ManageReports from './components/Doctor/ManageReports.vue';
-
-// User Routes
-import ManageUserAppointments from './components/User/ManageUserAppointments.vue';
+import ViewCountry from './components/Admin/ViewCountry.vue';
+import AddCountry from './components/Admin/AddCountry.vue';
 
 //Vue.component('/admin/manage-users', require('./components/Admin/ManageUsers.vue').default);
 
@@ -25,45 +18,17 @@ Vue.component('denied',require('./components/Denied.vue').default);
 
 const routes = [
 	{
-  	path: '/admin/manage-users',
-    meta:{ title: 'Manage Users'},
-    component: ManageUsers,
-    name: 'ManageUsers'
+  	path: '/admin/view-country',
+    meta:{ title: 'View Country'},
+    component: ViewCountry,
+    name: 'ViewCountry'
   },
   
   {
-  	path: '/admin/manage-appointments',
-    meta:{ title: 'Manage Appointments'},
-    component: ManageAdminAppointments,
-    name: 'ManageAdminAppointments'
-  },
-  
-  {
-  	path: '/doctor/manage-appointments',
-    meta:{ title: 'Manage Appointments'},
-    component: ManageDoctorAppointments,
-    name: 'ManageDoctorAppointments'
-  },
-  
-  {
-  	path: '/doctor/reports/:id',
-    meta:{ title: 'Manage Reports'},
-    component: ManageReports,
-    name: 'ManageReports'
-  },
-  
-  {
-  	path: '/user/manage-appointments',
-    meta:{ title: 'Manage Appointments'},
-    component: ManageUserAppointments,
-    name: 'ManageUserAppointments'
-  },
-  
-  {
-  	path: '/profile',
-    meta:{ title: 'User Profile'},
-    component: Profile,
-    name: 'UserProfile'
+  	path: '/admin/add-country',
+    meta:{ title: 'Add Country'},
+    component: AddCountry,
+    name: 'AddCountry'
   },
   
   {

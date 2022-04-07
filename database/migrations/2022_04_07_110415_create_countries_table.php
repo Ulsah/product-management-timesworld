@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppointmentReportMigration extends Migration
+class CreateCountriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateAppointmentReportMigration extends Migration
      */
     public function up()
     {
-        Schema::create('appointment_report_migration', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('appointment')->constrained('appointments');
-            $table->string('name');
-            $table->string('location');
+            $table->string("country");
+            $table->string("flag");
+            $table->enum("continent", ["Asia", "Oceania", "Europe", "North America", "South America", "Africa", "Antarctica"]);
+            $table->bigInteger("rank")->unique();
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateAppointmentReportMigration extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appointment_report_migration');
+        Schema::dropIfExists('countries');
     }
 }

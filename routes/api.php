@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Countries;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,17 +19,12 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 });
 
-// User Routes
-Route::post('/getUsers', [App\Http\Controllers\API\UsersController::class, 'index']);
-Route::post('/getDocs', [App\Http\Controllers\API\UsersController::class, 'doctors']);
-Route::post('/getPatients', [App\Http\Controllers\API\UsersController::class, 'patients']);
-Route::post('/updateUser', [App\Http\Controllers\API\UsersController::class, 'update']);
-Route::post('/addUser', [App\Http\Controllers\API\UsersController::class, 'store']);
-
-// Appointment Routes
-Route::post('/addAppointment', [App\Http\Controllers\API\AppointmentController::class, 'store']);
-Route::post('/updateAppointment', [App\Http\Controllers\API\AppointmentController::class, 'update']);
-Route::post('/changeAppointment', [App\Http\Controllers\API\AppointmentController::class, 'change']);
-Route::post('/getAppointments', [App\Http\Controllers\API\AppointmentController::class, 'index']);
-Route::post('/getDocAppointments', [App\Http\Controllers\API\AppointmentController::class, 'indexDoc']);
+// Country Routes
+Route::post('/addCountry', [App\Http\Controllers\API\CountriesController::class, 'store'])->name('addCountry');
+Route::get('/getCountries', [App\Http\Controllers\API\CountriesController::class, 'index'])->name('getCountries');
+Route::get('/getAllCountries', [App\Http\Controllers\API\CountriesController::class, 'indexAll'])->name('getAllCountries');
+Route::get('/country/{id}', function ($id){
+	return Countries::where('id', $id)->first();
+});
+Route::post('/deleteCountry', [App\Http\Controllers\API\CountriesController::class, 'destroy'])->name('deleteCountry');
  
