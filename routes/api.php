@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Countries;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +19,12 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Country Routes
-Route::post('/addCountry', [App\Http\Controllers\API\CountriesController::class, 'store'])->name('addCountry');
-Route::get('/getCountries', [App\Http\Controllers\API\CountriesController::class, 'index'])->name('getCountries');
-Route::get('/getAllCountries', [App\Http\Controllers\API\CountriesController::class, 'indexAll'])->name('getAllCountries');
-Route::get('/country/{id}', function ($id){
-	return Countries::where('id', $id)->first();
+// Product Routes
+Route::post('/addProduct', [App\Http\Controllers\API\ProductController::class, 'store']);
+Route::get('/getProducts', [App\Http\Controllers\API\ProductController::class, 'index']);
+Route::post('/editProduct', [App\Http\Controllers\API\ProductController::class, 'update']);
+Route::get('/product/{id}', function ($id){
+	return Product::where('id', $id)->first();
 });
-Route::post('/deleteCountry', [App\Http\Controllers\API\CountriesController::class, 'destroy'])->name('deleteCountry');
+Route::post('/deleteProduct', [App\Http\Controllers\API\ProductController::class, 'destroy']);
  

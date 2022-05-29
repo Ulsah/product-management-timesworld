@@ -6,7 +6,7 @@
                     <div class="card-header">Profile</div>
 
                     <div class="card-body">
-                        Profile
+                        <h1>Use the Side Menu</h1>
                     </div>
                 </div>
             </div>

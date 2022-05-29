@@ -82,17 +82,17 @@
 			<ul class="nav nav-treeview">
 				@can('isAdmin')
 					<li class="nav-item">
-						<router-link to="/admin/view-country" class="nav-link">
+						<router-link to="/admin/view-products" class="nav-link">
 							<i class="far fa-circle nav-icon"></i>
-							<p>View Country</p>
+							<p>View Products</p>
 						</router-link>
 					</li>
 				@endcan
 				@can('isAdmin')
 					<li class="nav-item">
-						<router-link to="/admin/add-country" class="nav-link">
+						<router-link to="/admin/add-product" class="nav-link">
 						<i class="far fa-circle nav-icon"></i>
-						<p>Add Country</p>
+						<p>Add Product</p>
 						</a>
 					</li>
 				@endcan

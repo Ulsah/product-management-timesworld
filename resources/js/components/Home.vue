@@ -3,10 +3,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Profile</div>
-
                     <div class="card-body">
-                        Profile
+                       	<h1>Use The Side Menu</h1>
                     </div>
                 </div>
             </div>

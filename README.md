@@ -23,7 +23,4 @@
 9. Run `php artisan serve` & `npm run watch` to host the application
 10. Access the app by going to the location where its hosted from your browser
 
-## Estimated time
-
-2 hours
-
+## Screenshots are included in the root directory
